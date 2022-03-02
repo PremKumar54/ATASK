@@ -1,0 +1,21 @@
+<h2> User component </h2>
+
+<p>Customer No :  {{user?.['id']}}</p>
+<p>Name        : {{user?.['name']}}</p>
+<p>Address   : {{user?.['email']}}</p>
+ 
+<button mat-raised-button color="primary"  (click)= "post()">Post</button>
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>title</th>
+        <th>body</th>
+    </tr>
+    <tr *ngFor= "let i of postdata">
+        <td>{{i.id}}</td>
+        <td>{{i.title}}</td>
+        <td>{{i.body}}</td>
+    </tr>
+</table>
