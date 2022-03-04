@@ -13,6 +13,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { UsersComponent } from './users/users.component';
 import { UserComponent } from './user/user.component';
 import { AlbumsComponent } from './albums/albums.component';
+import { PostsComponent } from './posts/posts.component';
 // import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { AlbumsComponent } from './albums/albums.component';
     UsersComponent,
     UserComponent,
     AlbumsComponent,
+    PostsComponent,
   ],
   imports: [
     BrowserModule,

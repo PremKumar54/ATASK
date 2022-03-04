@@ -16,10 +16,13 @@ export class ApiService {
    return this.http.get('https://jsonplaceholder.typicode.com/users/'+id);
 
   }
-  getAlbums(){
-    return this.http.get('https://jsonplaceholder.typicode.com/albums');
+  getAlbums(id:number){
+    return this.http.get('https://jsonplaceholder.typicode.com/albums/'+id);
    }
+   getPost(){
+    return this.http.get("https://jsonplaceholder.typicode.com/posts");
 
+  }
   
   
 }

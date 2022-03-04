@@ -22,8 +22,9 @@ export class UserComponent implements OnInit {
   ngOnInit(): void {
 
   }
-  
-   async post() {
+  post(data:any){
+    console.log(data);
+  }   /*async post() {
     
     console.log();
     const res = await fetch('https://jsonplaceholder.typicode.com/users/1/posts');
@@ -31,7 +32,7 @@ export class UserComponent implements OnInit {
       console.log(this.postdata)
 
 
-  }
+  }*/
   
 }
 

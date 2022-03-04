@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -8,18 +9,21 @@ import { ApiService } from '../api.service';
 })
 export class AlbumsComponent implements OnInit {
   albumData : any =[];
-  i:any
-  constructor(private service:ApiService) { }
+  id:any
+  constructor(private service:ApiService,private route:ActivatedRoute) { }
   
 
   
     
 
   ngOnInit(): void {
-    this.service.getAlbums().subscribe((res)=>{
+   let id = this.route.snapshot.params['id'];
+    this.service.getAlbums(id).subscribe((res)=>{
       this.albumData = res
+      console.log(res);
+      console.log(this.id);
+
      })
-      console.log(this.albumData)
   }
   
 

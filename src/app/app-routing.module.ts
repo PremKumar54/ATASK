@@ -5,6 +5,7 @@ import { UsersComponent } from './users/users.component';
 import { AlbumsComponent } from './albums/albums.component';
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
+import { PostsComponent } from './posts/posts.component';
 const routes: Routes = [
   {
     path: ' ',
@@ -18,13 +19,16 @@ const routes: Routes = [
     component: UsersComponent,
     
   },
-  
-  
-
+  { path: 'users/:id/:posts' ,
+  component:PostsComponent,
+  },
   {
     path: 'albums',
     component: AlbumsComponent,
+    
   },
+
+  
   {
     path: '',
     component: AppComponent,
